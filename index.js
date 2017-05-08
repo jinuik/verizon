@@ -1,4 +1,4 @@
-ar express = require("express");
+var express = require("express");
 var alexa = require("alexa-app");
 
 var PORT = process.env.port || 8080;
