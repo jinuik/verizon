@@ -57,6 +57,16 @@ alexaApp.intent("brilliosales", {
   }
 );
 
+alexaApp.intent("customerresponse", {
+    "utterances": [
+      "what is the customer responser rate", "what is the  responser rate of customers"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
+    response.say("customer reponse rate is 15.11 percentage");
+  }
+);
 
 
 app.error = function(exception, request, response) {
