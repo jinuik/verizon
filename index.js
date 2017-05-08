@@ -39,9 +39,25 @@ alexaApp.intent("nameIntent", {
   },
   function(request, response) {
     console.log('hitting this page')
+    response.say("My name is Jinu");
+  }
+);
+
+
+
+alexaApp.intent("brilliosales", {
+    "slots": { "NAME": "LITERAL" },
+    "utterances": [
+      "my name is {names|NAME}", "set my name to {names|NAME}"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
     response.say("Success!");
   }
 );
+
+
 
 app.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
