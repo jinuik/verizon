@@ -47,14 +47,14 @@ alexaApp.intent("nameIntent", {
 
 
 alexaApp.intent("brilliosales", {
-    "slots": { "NAME": "LITERAL" },
     "utterances": [
-      "my name is {names|NAME}", "set my name to {names|NAME}"
+      "what is the brillio sales", "what is the  sales", 
     ]
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("Success!");
+    response.say("Sales	is 207,417.4 dollars");
+);
   }
 );
 
