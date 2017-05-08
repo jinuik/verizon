@@ -87,7 +87,7 @@ alexaApp.intent("ctr", {
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("transaction reponse rate is 16.55 percentage");
+    response.say("ctr is 3.43 percentage");
   }
 );
 
