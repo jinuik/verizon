@@ -43,5 +43,9 @@ alexaApp.intent("nameIntent", {
   }
 );
 
+app.error = function(exception, request, response) {
+  response.say("Sorry, something bad happened");
+};
+
 app.listen(PORT);
 console.log("Listening on port " + PORT + ", try http://localhost:" + PORT + "/test");
