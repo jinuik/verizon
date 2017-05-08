@@ -6,6 +6,14 @@ http.createServer(function (request, response) {
    // Send the HTTP header 
    // HTTP Status: 200 : OK
    // Content Type: text/plain
+    
+    if (request.url === '/favicon.ico') {
+    response.writeHead(200, {'Content-Type': 'image/x-icon'} );
+    response.end();
+    console.log('favicon requested');
+    return;
+  }
+
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    // Send the response body as "Hello World"
