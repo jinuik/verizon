@@ -44,22 +44,32 @@ alexaApp.intent("nameIntent", {
   }
 );
 
-
-
-alexaApp.intent("brilliosales", {
+alexaApp.intent("welcome", {
     "utterances": [
-      "what is the brillio sales", "what is the  sales", "what is brillio sales"
+      "What am I seeing", "What is this"
     ]
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("Sales	is 207,417.4 dollars");
+    response.say("Hi Jinu, You are seeing Marketting effectiveness dashboard");
+  }
+);
+
+
+alexaApp.intent("brilliosales", {
+    "utterances": [
+      "How is the overall sales", "what is the  sales", "what is brillio sales"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
+    response.say("Sales	is 207,417.4 dollars which is pretty good overall");
   }
 );
 
 alexaApp.intent("customerresponse", {
     "utterances": [
-      "what is the customer responser rate", "what is the  responser rate of customers"
+      "How is customer response rate", "what is the  response rate of customers"
     ]
   },
   function(request, response) {
@@ -71,14 +81,17 @@ alexaApp.intent("customerresponse", {
 
 alexaApp.intent("transactionrresponse", {
     "utterances": [
-      "what is the transaction response rate", "what is the  responser rate of transaction"
+      "open dashboard"
     ]
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("transaction reponse rate is 16.55 percentage");
+    response.say("functionality coming soon");
   }
 );
+
+
+
 
 alexaApp.intent("ctr", {
     "utterances": [
