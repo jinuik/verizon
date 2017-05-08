@@ -87,7 +87,7 @@ alexaApp.intent("ctr", {
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("ctr is 3.43 percentage");
+    response.say("CTR is 3.43 percentage");
   }
 );
 
