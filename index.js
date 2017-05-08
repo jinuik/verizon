@@ -48,7 +48,7 @@ alexaApp.intent("nameIntent", {
 
 alexaApp.intent("brilliosales", {
     "utterances": [
-      "what is the brillio sales", "what is the  sales", 
+      "what is the brillio sales", "what is the  sales", "what is brillio sales"
     ]
   },
   function(request, response) {
