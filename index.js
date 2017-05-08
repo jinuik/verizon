@@ -69,6 +69,18 @@ alexaApp.intent("customerresponse", {
 );
 
 
+alexaApp.intent("transactionrresponse", {
+    "utterances": [
+      "what is the transaction response rate", "what is the  responser rate of transaction"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
+    response.say("transaction reponse rate is 16.55 percentage");
+  }
+);
+
+
 app.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
 };
