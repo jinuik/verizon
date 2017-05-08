@@ -9,7 +9,11 @@ http.createServer(function (request, response) {
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    // Send the response body as "Hello World"
-    exports.handler = function(event, context, callback) {
+   
+   response.end('Hello World\n');
+}).listen(process.env.PORT || 8000);
+
+ exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.registerHandlers(handlers);
     alexa.execute();
@@ -26,6 +30,3 @@ var handlers = {
         this.emit(':tell', 'Hi Welcome to brillio!');
     }
 };
-   //response.end('Hello World\n');
-}).listen(process.env.PORT || 8000);
-
