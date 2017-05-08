@@ -38,6 +38,7 @@ alexaApp.intent("nameIntent", {
     ]
   },
   function(request, response) {
+    console.log('hitting this page')
     response.say("Success!");
   }
 );
