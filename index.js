@@ -69,12 +69,12 @@ alexaApp.intent("brilliosales", {
 
 alexaApp.intent("customerresponse", {
     "utterances": [
-      "How is customer response rate", "what is the  response rate of customers"
+      "How much is customer response rate", "what is the  response rate of customers"
     ]
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("customer reponse rate is 15.11 percentage");
+    response.say("customer response rate is 15.11 percentage");
   }
 );
 
