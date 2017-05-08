@@ -14,11 +14,17 @@ http.createServer(function (request, response) {
     return;
   }
 
+    if (request.url === '/') {
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    // Send the response body as "Hello World"
    
    response.end('Hello World\n');
+    console.log('favicon requested');
+    return;
+  }
+
+   
 }).listen(process.env.PORT || 8000);
 
  exports.handler = function(event, context, callback) {
