@@ -80,6 +80,16 @@ alexaApp.intent("transactionrresponse", {
   }
 );
 
+alexaApp.intent("ctr", {
+    "utterances": [
+      "what is the ctr", "what is our ctr"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
+    response.say("transaction reponse rate is 16.55 percentage");
+  }
+);
 
 app.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
