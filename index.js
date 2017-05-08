@@ -54,7 +54,6 @@ alexaApp.intent("brilliosales", {
   function(request, response) {
     console.log('hitting this page')
     response.say("Sales	is 207,417.4 dollars");
-);
   }
 );
 
