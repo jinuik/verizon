@@ -7,6 +7,7 @@ http.createServer(function (request, response) {
    // HTTP Status: 200 : OK
    // Content Type: text/plain
     
+     console.log('favicon requested request.url',request.url);
     if (request.url === '/favicon.ico') {
     response.writeHead(200, {'Content-Type': 'image/x-icon'} );
     response.end();
@@ -18,7 +19,7 @@ http.createServer(function (request, response) {
        response.writeHead(200, {'Content-Type': 'text/plain'});
    
    // Send the response body as "Hello World"
-   
+    console.log('favicon requested');
    response.end('Hello World\n');
   } 
    
@@ -27,6 +28,7 @@ http.createServer(function (request, response) {
 }).listen(process.env.PORT || 8000);
 
  exports.handler = function(event, context, callback) {
+     console.log('event handler')
     var alexa = Alexa.handler(event, context);
     alexa.registerHandlers(handlers);
     alexa.execute();
