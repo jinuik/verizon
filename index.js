@@ -4,6 +4,9 @@ var alexa = require("alexa-app");
 var PORT = process.env.PORT || 8080;
 var app = express();
 
+var server = require('http').createServer(app);  
+var io = require('socket.io')(server);
+
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("test");
 
@@ -86,7 +89,8 @@ alexaApp.intent("transactionrresponse", {
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("functionality coming soon");
+    socketFunction('dashboard')
+    response.say("opening dashboard");
   }
 );
 
@@ -107,6 +111,12 @@ alexaApp.intent("ctr", {
 app.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
 };
+
+var socketFunction = function(utterence) {
+io.on('connection', function (socket) {
+  socket.emit('alexacommand', { utterence });  
+});
+}
 
 app.listen(PORT);
 console.log("Listening on port " + PORT + ", try http://localhost:" + PORT + "/test");
