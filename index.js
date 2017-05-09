@@ -6,7 +6,11 @@ var app = express();
 
 var server = require('http').createServer(app);  
 var io = require('socket.io')(server);
-
+var S;
+io.on('connection', function(socket){
+    S = socket;
+  console.log('a user connected');
+});
 
 app.use('/js', express.static('js'))
 // ALWAYS setup the alexa app and attach it to express before anything else.
@@ -115,9 +119,10 @@ app.error = function(exception, request, response) {
 };
 
 var socketFunction = function(utterence) {
-io.on('connection', function (socket) {
-  socket.emit('alexacommand', { utterence });  
-});
+//io.on('connection', function (socket) {
+    
+  io.emit('alexacommand', { utterence });  
+//});
 }
 
 app.listen(PORT);

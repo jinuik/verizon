@@ -10,8 +10,10 @@ Utterances:
 </div>
 <script src="../js/socket.js"></script>
 <script>
-  var socket = io('https://brilliojax.herokuapp.com/');
-  socket.on('alexacommand', function (data) {
-    console.log(data);
-  });
+  var socket = io();
+  //socket.on('message', function (data1) {
+    socket.on('alexacommand', function (data) {
+        console.log(data1);
+      });
+  //});
 </script>
