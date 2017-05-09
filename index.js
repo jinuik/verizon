@@ -121,7 +121,7 @@ app.error = function(exception, request, response) {
 var socketFunction = function(utterence) {
 //io.on('connection', function (socket) {
     
-  io.emit('alexacommand', { utterence });  
+  S.emit('alexacommand', { utterence });  
 //});
 }
 
