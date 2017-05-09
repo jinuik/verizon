@@ -7,6 +7,8 @@ var app = express();
 var server = require('http').createServer(app);  
 var io = require('socket.io')(server);
 
+
+app.use(express.static('js'))
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("test");
 
@@ -88,7 +90,7 @@ alexaApp.intent("transactionrresponse", {
     ]
   },
   function(request, response) {
-    console.log('hitting this page')
+    console.log('hitting this page dashboard')
     socketFunction('dashboard')
     response.say("opening dashboard");
   }
