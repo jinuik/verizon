@@ -14,7 +14,7 @@ io.on('connection', function(socket){
   console.log('a user connected');
 });
 
-app.use('/js', express.static('js'))
+app.use('/', express.static(__dirname + ''));
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("test");
 
