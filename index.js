@@ -127,5 +127,5 @@ var socketFunction = function(utterence) {
 //});
 }
 
-app.listen(PORT);
+server.listen(PORT);
 console.log("Listening on port " + PORT + ", try http://localhost:" + PORT + "/test");
