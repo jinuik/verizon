@@ -131,7 +131,8 @@ td {
 //  });
 socket.on('alexacommand', function(msg){
 //    io.emit('alexacommand', msg);
-     $("#pieChart").fadeIn(500);
+     $(".stage1").fadeIn(1000);
+    $(".stage2").hide(1000);
     console.log(msg);
   });
 //});
@@ -142,10 +143,12 @@ socket.on('alexacommand', function(msg){
     <div class="jumbotron text-center">
   <div><h1 align="center" class="stage1">Sales Dashboard</h1></div>
 <!--  <p>Resize this responsive page to see the effect!</p> -->
-        <div>
-        <h3>Welcome To Brillio Alexa Demo</h3>
-         You say to Echo Dot Device ::  <p>"Alexa, Ask Brillio Jax. Open Dashboard!"</p>
-        </div>    
+     
+    <div class="stage2">
+        <h3 >Welcome To Brillio Alexa Demo</h3>
+         You say to Echo Dot Device ::  <p>"1. Alexa, Ask Brillio Jax. Open Dashboard!"</p>
+             <p>"1. Alexa, Ask Brillio Jax. Open Dashboard!"</p>
+        </div>   
 </div>  
   
       
