@@ -120,8 +120,8 @@ td {
       <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
     $(document).ready(function(){
-    $("#pieChart").hide();
-        $("#barChart").hide();$("#lineChart").hide();
+    $(".stage1").hide();
+       // $("#barChart").hide();$("#lineChart").hide();
     });
   var socket = io();
 //    socket.on('connection', function(socket){
@@ -140,7 +140,7 @@ socket.on('alexacommand', function(msg){
   <body>
       
     <div class="jumbotron text-center">
-  <h1 align="center">Sales Dashboard</h1>
+  <div><h1 align="center" class="stage1">Sales Dashboard</h1></div>
 <!--  <p>Resize this responsive page to see the effect!</p> -->
         <div>
         <h3>Welcome To Alexa Demo</h3>
@@ -150,9 +150,9 @@ socket.on('alexacommand', function(msg){
   
       
       
-    <div id="pieChart"></div>
-    <div id="barChart"></div>  
-    <div id="lineChart"></div>
+    <div id="pieChart"  class="stage1"></div>
+    <div id="barChart"  class="stage1"></div>  
+    <div id="lineChart"  class="stage1"></div>
       
     <script type="text/javascript">
     
