@@ -125,6 +125,9 @@ td {
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
+socket.on('alexacommand', function(msg){
+    io.emit('alexacommand', msg);
+  });
 });
 </script>
   </head>
