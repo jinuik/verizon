@@ -115,6 +115,18 @@ td {
 }
 				 
     </style>
+      
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  var socket = io();
+    io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+});
+</script>
   </head>
   <body>
       
@@ -128,6 +140,7 @@ td {
     <div id="pieChart"></div>
     <div id="barChart"></div>  
     <div id="lineChart"></div>
+      
     <script type="text/javascript">
     
 /*
