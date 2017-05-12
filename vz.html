@@ -120,13 +120,14 @@ td {
       <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
   var socket = io();
-    io.on('connection', function(socket){
-  console.log('a user connected');
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
+//    socket.on('connection', function(socket){
+//  console.log('a user connected');
+//  socket.on('disconnect', function(){
+//    console.log('user disconnected');
+//  });
 socket.on('alexacommand', function(msg){
-    io.emit('alexacommand', msg);
+//    io.emit('alexacommand', msg);
+    console.log(msg);
   });
 });
 </script>
