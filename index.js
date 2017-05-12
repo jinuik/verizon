@@ -69,7 +69,7 @@ alexaApp.intent("welcome", {
 
 alexaApp.intent("brilliosales", {
     "utterances": [
-      "overall sales", "what is the  sales", "what is brillio sales"
+      "over all sales", "what is the  sales", "what is brillio sales"
     ]
   },
   function(request, response) {
