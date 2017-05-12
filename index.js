@@ -74,7 +74,7 @@ alexaApp.intent("brilliosales", {
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("Sales	is 207,417.4 dollars which is pretty good overall");
+    response.say("Sales	is 207,417.40 dollars which is pretty good overall");
   }
 );
 
