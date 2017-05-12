@@ -37,7 +37,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say("Welcome to Brillio Jax Demo");
+  response.say("Welcome to Brillio Jax Demo. I am Brillio AI Bot on Echo Dot");
 });
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
