@@ -41,20 +41,20 @@ alexaApp.launch(function(request, response) {
   response.say("Welcome to Brillio Jax Demo. I am Brillio AI Bot on Echo Dot");
 });
 
-alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
-
-alexaApp.intent("nameIntent", {
-    "slots": { "NAME": "LITERAL" },
-    "utterances": [
-      "my name is {names|NAME}", "set my name to {names|NAME}"
-    ]
-  },
-  function(request, response) {
-    console.log(request);
-    console.log('hitting this page')
-    response.say("My name is Jinu");
-  }
-);
+//alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
+//
+//alexaApp.intent("nameIntent", {
+//    "slots": { "NAME": "LITERAL" },
+//    "utterances": [
+//      "my name is {names|NAME}", "set my name to {names|NAME}"
+//    ]
+//  },
+//  function(request, response) {
+//    console.log(request);
+//    console.log('hitting this page')
+//    response.say("My name is Jinu");
+//  }
+//);
 
 alexaApp.intent("welcome", {
     "utterances": [
