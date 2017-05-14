@@ -15,6 +15,7 @@ io.on('connection', function(socket){
 });
 
 app.use('/', express.static(__dirname + ''));
+
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("test");
 
@@ -62,7 +63,8 @@ alexaApp.intent("welcome", {
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("Hi Jinu, You are seeing Sales dashboard");
+    response.say("Hi Jinu, You are seeing Sales
+                 dashboard");
   }
 );
 
