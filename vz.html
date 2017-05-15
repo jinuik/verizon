@@ -154,7 +154,7 @@ socket.on('alexacommand', function(msg){
   
       <div class="stage1" align="center">
           
-<!--      <p id="demo"></p>-->
+      <p id="demo"></p>
 <!--      <p id="demo1"></p>-->
 
           
@@ -162,7 +162,7 @@ socket.on('alexacommand', function(msg){
     <p></p>
       </div>
       
-    <div id="pieChart"  class="stage1"><p id="demo"></p></div>
+    <div id="pieChart"  class="stage1"></div>
     <div id="barChart"  class="stage1"></div>  
     <div id="lineChart"  class="stage1"></div>
   
@@ -730,11 +730,13 @@ function dsLineChart() {
 		.attr("id","lineChartTitle2")
 		.attr("x",width/2)
 		.attr("y",height/2)	
+    var myElement = document.getElementById("lineChartTitle2");
+    document.getElementById("demo").innerHTML = "Overall Sales: $" + myElement.innerHTML;
 		;
 	/* descriptive titles -- end */
     
-    var myElement = document.getElementById("lineChartTitle2");
-    document.getElementById("demo").innerHTML = "Overall Sales: $" + myElement.innerHTML;
+//    var myElement = document.getElementById("lineChartTitle2");
+//    document.getElementById("demo").innerHTML = "Overall Sales: $" + myElement.innerHTML;
 	    
 	plot.append("path")
 	    .attr("class", "line")
