@@ -155,6 +155,8 @@ socket.on('alexacommand', function(msg){
       <div class="stage1" align="center">
           
       <p id="demo"></p>
+      <p id="demo1"></p>
+
           
       <p>Overall Sales: $234,500.00 </p>
     <p></p>
@@ -717,6 +719,9 @@ function dsLineChart() {
 	    .attr("id", "lineChartPlot")
 	    ;
 
+     var myElement = document.getElementById("lineChartPlot");
+    document.getElementById("demo1").innerHTML = "Product1 Sales : $" + myElement.innerHTML;
+    
 		/* descriptive titles as part of plot -- start */
 	var dsLength=firstDatasetLineChart.length;
 
