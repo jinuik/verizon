@@ -153,6 +153,9 @@ socket.on('alexacommand', function(msg){
 </div>  
   
       <div class="stage1" align="center">
+          
+      <p id="demo"></p>
+          
       <p>Overall Sales: $234,500.00 </p>
     <p></p>
       </div>
@@ -724,6 +727,9 @@ function dsLineChart() {
 		.attr("y",height/2)	
 		;
 	/* descriptive titles -- end */
+    
+    var myElement = document.getElementById("lineChartTitle2");
+    document.getElementById("demo").innerHTML = "The text from the intro paragraph is " + myElement.innerHTML;
 	    
 	plot.append("path")
 	    .attr("class", "line")
