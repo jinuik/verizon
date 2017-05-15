@@ -783,8 +783,7 @@ dsLineChart();
 /* updates bar chart on request */
 function updateLineChart(group, colorChosen) {
 
-	var currentDatasetLineChart = datasetLineChartChosen(group);   
-
+	var currentDatasetLineChart = datasetLineChartChosen(group);  
 	var basics = dsLineChartBasics();
 	
 	var margin = basics.margin,
@@ -848,7 +847,7 @@ function updateLineChart(group, colorChosen) {
 	   .text(function(d) { return d.category + ": " + formatAsInteger(d.measure); })	 
 	   ;  
       var myElement = document.getElementById("lineChartTitle2");
-    document.getElementById("demo").innerHTML = ": $" + myElement.innerHTML;
+    document.getElementById("demo").innerHTML = group ": $" + myElement.innerHTML;
 
 }
 
