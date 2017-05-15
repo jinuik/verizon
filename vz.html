@@ -782,7 +782,7 @@ dsLineChart();
  
 /* updates bar chart on request */
 function updateLineChart(group, colorChosen) {
-
+    var group_text = group;
 	var currentDatasetLineChart = datasetLineChartChosen(group);  
 	var basics = dsLineChartBasics();
 	
@@ -816,6 +816,9 @@ function updateLineChart(group, colorChosen) {
 	plot.select("text")
 		.text(currentDatasetLineChart[dsLength-1].measure)
 		;
+    
+     var myElement = document.getElementById("lineChartTitle2");
+    document.getElementById("demo").innerHTML = "For "+ group_text ": $" + myElement.innerHTML;
 	/* descriptive titles -- end */
 	  
 	plot
@@ -846,8 +849,7 @@ function updateLineChart(group, colorChosen) {
 	   .selectAll("title")
 	   .text(function(d) { return d.category + ": " + formatAsInteger(d.measure); })	 
 	   ;  
-      var myElement = document.getElementById("lineChartTitle2");
-    document.getElementById("demo").innerHTML = "For "+ group ": $" + myElement.innerHTML;
+     
 
 }
 
