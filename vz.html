@@ -847,7 +847,7 @@ function updateLineChart(group, colorChosen) {
 	   .text(function(d) { return d.category + ": " + formatAsInteger(d.measure); })	 
 	   ;  
       var myElement = document.getElementById("lineChartTitle2");
-    document.getElementById("demo").innerHTML = group ": $" + myElement.innerHTML;
+    document.getElementById("demo").innerHTML = "For "+ group ": $" + myElement.innerHTML;
 
 }
 
