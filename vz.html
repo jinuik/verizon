@@ -818,8 +818,7 @@ function updateLineChart(group, colorChosen) {
 		.text(currentDatasetLineChart[dsLength-1].measure)
 		;
 	/* descriptive titles -- end */
-	    var myElement = document.getElementById("lineChartTitle2");
-    document.getElementById("demo").innerHTML = "Overall Sales: $" + myElement.innerHTML;
+	  
 	plot
 	.select("path")
 		.transition()
@@ -848,6 +847,8 @@ function updateLineChart(group, colorChosen) {
 	   .selectAll("title")
 	   .text(function(d) { return d.category + ": " + formatAsInteger(d.measure); })	 
 	   ;  
+      var myElement = document.getElementById("lineChartTitle2");
+    document.getElementById("demo").innerHTML = d.category + ": $" + myElement.innerHTML;
 
 }
 
