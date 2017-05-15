@@ -719,8 +719,8 @@ function dsLineChart() {
 	    .attr("id", "lineChartPlot")
 	    ;
 
-     var myElement = document.getElementById("lineChartPlot");
-    document.getElementById("demo").innerHTML = "Product1 Sales : $" + myElement.innerHTML;
+//     var myElement1 = document.getElementById("lineChartPlot");
+//    document.getElementById("demo1").innerHTML = "Product1 Sales : $" + myElement1.innerHTML;
     
 		/* descriptive titles as part of plot -- start */
 	var dsLength=firstDatasetLineChart.length;
@@ -733,8 +733,8 @@ function dsLineChart() {
 		;
 	/* descriptive titles -- end */
     
-//    var myElement = document.getElementById("lineChartTitle2");
-//    document.getElementById("demo").innerHTML = "Overall Sales: $" + myElement.innerHTML;
+    var myElement = document.getElementById("lineChartTitle2");
+    document.getElementById("demo").innerHTML = "Overall Sales: $" + myElement.innerHTML;
 	    
 	plot.append("path")
 	    .attr("class", "line")
