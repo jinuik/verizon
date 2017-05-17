@@ -99,7 +99,7 @@ alexaApp.intent("transactionrresponse", {
   function(request, response) {
     console.log('hitting this page dashboard')
     socketFunction('dashboard')
-    S.emit('getoverallsales', { 'overallsales' });
+    S.emit('getoverallsales', { overallsales });
     S.on('getoveralltradesales', function(data){
         response.say(data);
     });
