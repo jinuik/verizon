@@ -75,6 +75,10 @@ alexaApp.intent("brilliosales", {
   },
   function(request, response) {
     console.log('hitting this page')
+    S.emit('getoverallsales', { 'overallsales' });
+    S.on('getoveralltradesales', function(data){
+        response.say(data);
+    });
     response.say("Sales	is 234,500 dollars which is pretty good overall");
   }
 );
@@ -99,10 +103,7 @@ alexaApp.intent("transactionrresponse", {
   function(request, response) {
     console.log('hitting this page dashboard')
     socketFunction('dashboard')
-    S.emit('getoverallsales', { overallsales });
-    S.on('getoveralltradesales', function(data){
-        response.say(data);
-    });
+    
     response.say("opening dashboard");
   }
 );
