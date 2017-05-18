@@ -137,6 +137,21 @@ socket.on('alexacommand', function(msg){
   });
     
     
+    socket.on('getoverallsales', function(msg){
+//    io.emit('alexacommand', msg);
+//     $(".stage1").fadeIn(1000);
+//    $(".stage2").hide(1000);
+        if(msg == 'overallsales'){
+            socket.emit('getoveralltradesales',  'overallsales' )
+            
+        }
+    console.log(msg);
+  });
+    
+    
+    
+    
+    
 //    socket.on('getoverallsales', function(msg){
 ////    io.emit('alexacommand', msg);
 //        if(msg == 'overallsales'){
