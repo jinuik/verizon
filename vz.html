@@ -135,14 +135,16 @@ socket.on('alexacommand', function(msg){
     $(".stage2").hide(1000);
     console.log(msg);
   });
-    socket.on('getoverallsales', function(msg){
-//    io.emit('alexacommand', msg);
-        if(msg == 'overallsales'){
-            socket.emit('getoveralltradesales',  'overallsales' )
+    
+    
+//    socket.on('getoverallsales', function(msg){
+////    io.emit('alexacommand', msg);
+//        if(msg == 'overallsales'){
+//            socket.emit('getoveralltradesales',  'overallsales' )
 //     $(".stage1").fadeIn(1000);
 //    $(".stage2").hide(1000);
-    console.log(msg);
-  });
+//    console.log(msg);
+//  });
 //});
 </script>
   </head>
