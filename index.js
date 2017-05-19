@@ -78,6 +78,7 @@ alexaApp.intent("brilliosales", {
     S.emit('getoverallsales',  'overallsales' );
     S.on('getoveralltradesales', function(data){
         console.log(data);
+        console.log('hitting overallsales');
         response.say(data);
    });
     //response.say("Sales	is 234,500 dollars which is pretty good overall");
