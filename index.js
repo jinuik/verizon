@@ -75,6 +75,7 @@ alexaApp.intent("brilliosales", {
   },
   function(request, response) {
     console.log('hitting this page')
+    console.log('hitting overallsales');
     S.emit('getoverallsales',  'overallsales' );
     S.on('getoveralltradesales', function(data){
         console.log(data);
