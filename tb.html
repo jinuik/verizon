@@ -41,7 +41,7 @@
         <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
         <script>
     $(document).ready(function(){
-    $(".stage1").hide();
+    /*$(".stage1").hide();*/
        // $("#barChart").hide();$("#lineChart").hide();
     });
   var socket = io();
@@ -56,7 +56,16 @@ socket.on('alexacommand', function(msg){
     $(".stage2").hide(1000);
     console.log(msg);
   });
-        </script>        
+        </script>
+        
+        
+        
+        <script>
+
+var obj = JSON.parse(table);
+document.getElementById("demo").innerHTML = obj.value + ", " + obj.formattedvalue;
+
+</script>
             
     </head>
 
@@ -66,6 +75,8 @@ socket.on('alexacommand', function(msg){
                 <h3 >Welcome To Brillio's Alexa enabled Tableaue Demo</h3>
                 You say to Echo Dot Device ::  <p>"1. Alexa, Ask Tableau. Open Dashboard!"</p>
         </div> 
+        
+        <p id="demo"></p>
         
         <div class="stage1">
         <div class="page-header">
