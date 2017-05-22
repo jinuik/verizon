@@ -67,10 +67,9 @@ socket.on('alexacommand', function(msg){
 /*var obj = JSON.parse(table);
 document.getElementById("demo").innerHTML = obj.value + ", " + obj.formattedvalue;*/
             
-            var myObj, x;
-myObj = { "name":"John", "age":30, "city":"New York" };
-x = myObj.name;
-document.getElementById("demo").innerHTML = x;
+var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
+var myObj3 = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj3.name;
 
 </script>
             
