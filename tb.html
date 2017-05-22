@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>getData() Basic Example</title>
+        <title>Alexa enabled Tableau</title>
 		<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
         <script type="text/javascript">
             var viz, sheet, table;
@@ -41,6 +41,10 @@
 
     <body onload="initViz();">
         <div class="page-header">
+             <div class="stage2"  align="center">
+                <h3 >Welcome To Brillio's Alexa enabled Tableaue Demo</h3>
+                You say to Echo Dot Device ::  <p>"1. Alexa, Ask Tableau. Open Dashboard!"</p>
+              </div> 
             <h1>getData() Basic Example</h1>
             <p>Click the "Get Data" button to get underlying data for the viz.</p>
             <button id="getData" onclick="getUnderlyingData()" class="btn" disabled>Get Data</button>
