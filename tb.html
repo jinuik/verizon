@@ -37,19 +37,42 @@
                 });
             }
         </script>
+        
+        <script>
+    $(document).ready(function(){
+    $(".stage1").hide();
+       // $("#barChart").hide();$("#lineChart").hide();
+    });
+  var socket = io();
+//    socket.on('connection', function(socket){
+//  console.log('a user connected');
+//  socket.on('disconnect', function(){
+//    console.log('user disconnected');
+//  });
+socket.on('alexacommand', function(msg){
+//    io.emit('alexacommand', msg);
+     $(".stage1").fadeIn(1000);
+    $(".stage2").hide(1000);
+    console.log(msg);
+  });
+        </script>        
+            
     </head>
 
     <body onload="initViz();">
-        <div class="page-header">
-             <div class="stage2"  align="center">
+        
+        <div class="stage2"  align="center">
                 <h3 >Welcome To Brillio's Alexa enabled Tableaue Demo</h3>
                 You say to Echo Dot Device ::  <p>"1. Alexa, Ask Tableau. Open Dashboard!"</p>
               </div> 
-            <h1>getData() Basic Example</h1>
+        <div class="stage1">
+        <div class="page-header">
+             <h1>getData() Basic Example</h1>
             <p>Click the "Get Data" button to get underlying data for the viz.</p>
             <button id="getData" onclick="getUnderlyingData()" class="btn" disabled>Get Data</button>
         </div>
         <div id="vizContainer" style="width:600px; height:600px;"></div>
         <div id="dataTarget"></div>
+        </div>
     </body>
 </html>
