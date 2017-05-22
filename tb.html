@@ -65,8 +65,10 @@ socket.on('alexacommand', function(msg){
 /*var obj = JSON.parse(table);
 document.getElementById("demo").innerHTML = obj.value + ", " + obj.formattedvalue;*/
             
-            var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
-document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+            var myObj, x;
+myObj = { "name":"John", "age":30, "city":"New York" };
+x = myObj.name;
+document.getElementById("demo").innerHTML = x;
 
 </script>
             
@@ -78,7 +80,6 @@ document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
                 <h3 >Welcome To Brillio's Alexa enabled Tableaue Demo</h3>
                 You say to Echo Dot Device ::  <p>"1. Alexa, Ask Tableau. Open Dashboard!"</p>
             <p id="demo"></p>
-                        <p>helloooooo</p>
 
         </div> 
         
