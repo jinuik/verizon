@@ -8,7 +8,7 @@
 
             function initViz() {
 		var containerDiv = document.getElementById("vizContainer"),
-                    url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks",
+                    url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
                     options = {
                         hideTabs: true,
                         hideToolbar: true,
@@ -20,7 +20,7 @@
             }
 
             function getUnderlyingData(){
-                sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Stock Map Sheet");
+                sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Storm Map Sheet");
 		 // If the active sheet is not a dashboard, then you can just enter:
 		 // viz.getWorkbook().getActiveSheet();
                 options = {
