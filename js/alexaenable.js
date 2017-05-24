@@ -16,6 +16,14 @@ dataR = msg;
   });
     
     function processData(){
+        
+        if(dataR == 'overallsales')
+        {
+        }
+          else if(dataR == 'opendashboard')
+          {
+              initViz();
+          }
             if(dataR.slots){
 
     if(dataR.slots.COMMANDNAME.value == "engineering")
