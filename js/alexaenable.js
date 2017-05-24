@@ -20,7 +20,7 @@ dataR = msg;
         if(dataR == 'overallsales')
         {
         }
-          else if(dataR == 'opendashboard')
+          else if(dataR == 'dashboard')
           {
               initViz();
           }
