@@ -77,7 +77,7 @@ alexaApp.intent("welcome", {
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("Hi Jinu, You are seeing Sales dashboard");
+    response.say("Hi Jinu, You are seeing a Sample Tableau dashboard on College Admissions, published by Chris Gerrard");
   }
 );
 
