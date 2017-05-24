@@ -3,18 +3,22 @@
      
     });
   var socket = io();
-
+var dataR;
 socket.on('alexacommand', function(msg){
-
+dataR = msg;
+    processData();
     console.log(msg);
   });
     
-     socket.on('getoverallsales', function(msg){
+  socket.on('getoverallsales', function(msg){
 
        console.log(msg);
   });
     
+    function processData(){
     
+    
+    }
     
     
     
