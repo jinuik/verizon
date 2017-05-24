@@ -41,6 +41,10 @@
          sheet.selectMarksAsync("College", 'Music', tableau.SelectionUpdateType.REMOVE);   
         }
         function getDataFromSheet(){
+            options = {
+                  
+                    
+                    }
               sheet.getUnderlyingDataAsync(options).then(function(t){
                        table = t;
 			var tgt = document.getElementById("dataTarget");

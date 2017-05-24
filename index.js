@@ -41,7 +41,7 @@ alexaApp.launch(function(request, response) {
   response.say("Welcome to Brillio Jax Demo. I am Brillio AI Bot on Echo Dot");
 });
 
-alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
+/*alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
 
 alexaApp.intent("nameIntent", {
     "slots": { "NAME": "LITERAL" },
@@ -54,7 +54,8 @@ alexaApp.intent("nameIntent", {
     console.log('hitting this page')
     response.say("My name is Jinu");
   }
-);
+);*/
+
 alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
@@ -82,7 +83,7 @@ alexaApp.intent("welcome", {
 );
 
 
-alexaApp.intent("brilliosales", {
+/*alexaApp.intent("brilliosales", {
     "utterances": [
       "over all sales", "what is the  sales", "what is brillio sales"
     ]
@@ -93,9 +94,9 @@ alexaApp.intent("brilliosales", {
  
     response.say("Sales	is 234,500 dollars which is pretty good overall");
   }
-);
+);*/
 
-alexaApp.intent("customerresponse", {
+/*alexaApp.intent("customerresponse", {
     "utterances": [
       "How much is customer response rate", "what is the  response rate of customers"
     ]
@@ -104,7 +105,7 @@ alexaApp.intent("customerresponse", {
     console.log('hitting this page')
     response.say("customer response rate is 15.11 percentage");
   }
-);
+);*/
 
 
 alexaApp.intent("transactionrresponse", {
@@ -123,7 +124,7 @@ alexaApp.intent("transactionrresponse", {
 
 
 
-alexaApp.intent("ctr", {
+/*alexaApp.intent("ctr", {
     "utterances": [
       "what is the ctr", "what is our ctr"
     ]
@@ -132,7 +133,7 @@ alexaApp.intent("ctr", {
     console.log('hitting this page')
     response.say("CTR is 3.43 percentage");
   }
-);
+);*/
 
 app.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
