@@ -32,6 +32,8 @@ dataR = msg;
           selectCollege('Music')
      else if (dataR.slots.COMMANDNAME.value == "all")
           markall();
+else if (dataR.slots.COMMANDNAME.value == "data")
+          getDataFromSheet();
     }
 }
 
