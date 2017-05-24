@@ -16,8 +16,13 @@ dataR = msg;
   });
     
     function processData(){
-    
-    
+            if(dataR.slots){
+
+    if(dataR.slots.COMMANDNAME.value == "engineering")
+        selectCollege('Engineering')
+    else if (dataR.slots.COMMANDNAME.value == "music")
+          selectCollege('Music')
+    }
     }
     
     
