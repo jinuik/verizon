@@ -37,18 +37,26 @@
         function clearCollegeSelection() {
             sheet.clearSelectedMarksAsync();
         }
-        function selectAll(){
+        function markall(){
          sheet.selectMarksAsync("College", 'Music', tableau.SelectionUpdateType.REMOVE);   
         }
     </script>
 </head>
 
 <body onload="">
+      <div class="stage2"  align="center">
+        <h3 >Welcome To Brillio TableaueAlexa Demo</h3>
+         You say to Echo Dot Device ::  <p>"1. Alexa, Ask BMS. Open Dashboard!"</p>
+         
+         
+        </div>   
 	<div id="vizContainer"></div>
     <br />    
+<!--
     <button onclick="selectCollege('Engineering');">Select a value</button>
     <button onclick="addCollegeToSelection('Business');">Add to the selection</button>
     <button onclick="clearCollegeSelection();">Clear all</button>
+-->
 </body>
 
 </html>
