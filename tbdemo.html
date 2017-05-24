@@ -37,6 +37,9 @@
         function clearCollegeSelection() {
             sheet.clearSelectedMarksAsync();
         }
+        function selectAll(){
+         sheet.selectMarksAsync("College", 'Music', tableau.SelectionUpdateType.REMOVE);   
+        }
     </script>
 </head>
 
