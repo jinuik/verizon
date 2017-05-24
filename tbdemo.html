@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alexa Tableau Interaction Demo</title>
+	  <script src="/socket.io/socket.io.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="js/alexaenable.js"></script>
+    <script type="text/javascript" 
+        src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+    
+    <script type="text/javascript">
+        var viz, sheet;
+        
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/College",
+                options = {
+                    "Academic Year": "",
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        sheet = viz.getWorkbook().getActiveSheet();
+                    }
+                };
+            
+            viz = new tableau.Viz(containerDiv, url, options);
+        }
+        
+        function selectCollege(college_name) {
+            sheet.selectMarksAsync("College", college_name, tableau.SelectionUpdateType.REPLACE);
+        }
+
+        function addCollegeToSelection(college_name) {
+            sheet.selectMarksAsync("College", college_name, tableau.SelectionUpdateType.ADD);
+        }
+
+        function clearCollegeSelection() {
+            sheet.clearSelectedMarksAsync();
+        }
+    </script>
+</head>
+
+<body onload="initViz();">
+	<div id="vizContainer"></div>
+    <br />    
+    <button onclick="selectCollege('Engineering');">Select a value</button>
+    <button onclick="addCollegeToSelection('Business');">Add to the selection</button>
+    <button onclick="clearCollegeSelection();">Clear all</button>
+</body>
+
+</html>

@@ -4,11 +4,11 @@
         <title>Alexa enabled Tableau</title>
 		<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
         <script type="text/javascript">
-            var viz, sheet, table;
+            var viz, sheet, table,  myjsonData;
 
             function initViz() {
 		var containerDiv = document.getElementById("vizContainer"),
-                    url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+                    url = "http://public.tableau.com/views/RegionalSampleWorkbook/Stocks",
                     options = {
                         hideTabs: true,
                         hideToolbar: true,
@@ -20,9 +20,9 @@
             }
 
             function getUnderlyingData(){
-                sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Storm Map Sheet");
+               // sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Regional Sample Workbook");
 		 // If the active sheet is not a dashboard, then you can just enter:
-		 // viz.getWorkbook().getActiveSheet();
+		 sheet = viz.getWorkbook().getActiveSheet();
                 options = {
                     maxRows: 10, // Max rows to return. Use 0 to return all rows
                     ignoreAliases: false,
@@ -33,7 +33,8 @@
                 sheet.getUnderlyingDataAsync(options).then(function(t){
                        table = t;
 			var tgt = document.getElementById("dataTarget");
-			tgt.innerHTML = "<h4>Underlying Data:</h4><p>" + JSON.stringify(table.getData()) + "</p>";
+                    myjsonData = table.getData();
+			tgt.innerHTML = "<h4>Underlying Data:</h4><p>" + JSON.stringify(myjsonData) + "</p>";
                 });
             }
         </script>
