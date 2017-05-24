@@ -30,10 +30,12 @@ dataR = msg;
         selectCollege('Engineering')
     else if (dataR.slots.COMMANDNAME.value == "music")
           selectCollege('Music')
-    } else if (dataR.slots.COMMANDNAME.value == "all")
+     else if (dataR.slots.COMMANDNAME.value == "all")
           markall();
     }
-    }
+}
+
+    
     
     
     
