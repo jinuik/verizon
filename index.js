@@ -62,7 +62,8 @@ alexaApp.intent("interactIntent", {
     ]
   },
   function(request, response) {
-    console.log(request.data.request.intent);
+   // console.log(request.data.request.intent);
+     socketFunction(request.data.request.intent)
     console.log('hitting this page')
     response.say("It works");
   }
