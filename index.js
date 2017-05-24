@@ -55,6 +55,19 @@ alexaApp.intent("nameIntent", {
     response.say("My name is Jinu");
   }
 );
+alexaApp.intent("interactIntent", {
+    "slots": { "COMMANDNAME": "LITERAL" },
+    "utterances": [
+      "open {command|COMMANDNAME}", "can you open {command|COMMANDNAME}"
+    ]
+  },
+  function(request, response) {
+    console.log(request.data.request.intent);
+    console.log('hitting this page')
+    response.say("It works");
+  }
+);
+
 
 alexaApp.intent("welcome", {
     "utterances": [
