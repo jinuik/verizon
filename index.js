@@ -50,7 +50,7 @@ alexaApp.intent("nameIntent", {
     ]
   },
   function(request, response) {
-    console.log(request.intent.slots.name.value);
+    console.log(request);
     console.log('hitting this page')
     response.say("My name is Jinu");
   }
