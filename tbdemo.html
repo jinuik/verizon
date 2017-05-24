@@ -40,6 +40,14 @@
         function markall(){
          sheet.selectMarksAsync("College", 'Music', tableau.SelectionUpdateType.REMOVE);   
         }
+        function getDataFromSheet(){
+              sheet.getUnderlyingDataAsync(options).then(function(t){
+                       table = t;
+			var tgt = document.getElementById("dataTarget");
+                    myjsonData = table.getData();
+			tgt.innerHTML = "<h4>Underlying Data:</h4><p>" + JSON.stringify(myjsonData) + "</p>";
+                });
+        }
     </script>
 </head>
 
@@ -56,7 +64,7 @@
     <button onclick="selectCollege('Engineering');">Select a value</button>
     <button onclick="addCollegeToSelection('Business');">Add to the selection</button>
     <button onclick="clearCollegeSelection();">Clear all</button>
--->
+--> <div id="dataTarget"></div>
 </body>
 
 </html>
