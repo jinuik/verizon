@@ -146,7 +146,7 @@ alexaApp.intent("reminder", {
   }
 );
     
-alexaApp.intent("reminder", {
+alexaApp.intent("recomment", {
     "utterances": [
       "Yes Please", "Ok", "Sure"
     ]
