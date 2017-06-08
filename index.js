@@ -56,7 +56,7 @@ alexaApp.intent("nameIntent", {
   }
 );*/
 
-alexaApp.intent("interactIntent", {
+/*alexaApp.intent("interactIntent", {
     "slots": { "COMMANDNAME": "LITERAL" },
     "utterances": [
       "open {command|COMMANDNAME}", "can you open {command|COMMANDNAME}"
@@ -68,10 +68,10 @@ alexaApp.intent("interactIntent", {
     console.log('hitting this page')
     response.say("Ok Jinu.");
   }
-);
+);*/
 
 
-alexaApp.intent("welcome", {
+/*alexaApp.intent("welcome", {
     "utterances": [
       "What am I seeing", "What is this"
     ]
@@ -80,7 +80,7 @@ alexaApp.intent("welcome", {
     console.log('hitting this page')
     response.say("Hi Jinu, You are seeing a Sample Tableau dashboard on College Admissions, published by Chris Gerrard");
   }
-);
+);*/
 
 
 /*alexaApp.intent("brilliosales", {
@@ -108,6 +108,7 @@ alexaApp.intent("welcome", {
 );*/
 
 
+/*
 alexaApp.intent("transactionrresponse", {
     "utterances": [
       "open dashboard"
@@ -120,20 +121,42 @@ alexaApp.intent("transactionrresponse", {
     response.say("opening dashboard");
   }
 );
+*/
 
-
-
-
-/*alexaApp.intent("ctr", {
+alexaApp.intent("Welcome", {
     "utterances": [
-      "what is the ctr", "what is our ctr"
+      "Hi", "Hello"
     ]
   },
   function(request, response) {
     console.log('hitting this page')
-    response.say("CTR is 3.43 percentage");
+    response.say("Hi John ");
   }
-);*/
+);
+
+
+alexaApp.intent("reminder", {
+    "utterances": [
+      "What are my reminders for next three days", "can you tell my reminders for next three days", "Please tell my reminders"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
+    response.say("Hi John, Let me check what all are the reminders for next three days.   Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half.");
+  }
+);
+    
+alexaApp.intent("reminder", {
+    "utterances": [
+      "Yes Please", "Ok", "Sure"
+    ]
+  },
+  function(request, response) {
+    console.log('hitting this page')
+    response.say("I can give you a good recipe to surprise.");
+  }
+);
+
 
 app.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
