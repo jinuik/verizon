@@ -46,11 +46,11 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set("number", 42);
-  response.say("Welcome to Brillio Imagine IZone. I am Brillio AI Bot on Echo Dot");
+  response.say("Welcome to Brillio Imagine Innovation Zone. I am Jax, a Brillio AI Bot on Echo Dot. How can I help you?");
   response.shouldEndSession(false);
 });
 
-alexaApp.intent("tellme", function(request, response) {
+/*alexaApp.intent("tellme", function(request, response) {
   var session = request.getSession();
   response.say("The number is " + session.get("number"));
   // clear only the 'number' attribute from the session
@@ -62,7 +62,7 @@ alexaApp.intent("clear", function(request, response) {
   var session = request.getSession();
   session.clear(); // or: session.clear("key") to clear a single value
   response.say("Session cleared!");
-});
+});*/
 
 
 
@@ -150,7 +150,7 @@ alexaApp.intent("transactionrresponse", {
 
 alexaApp.intent("Welcome", {
     "utterances": [
-      "Hi", "Hello"
+      "Hi", "Hello", "Hello Jax", "Hi Jax"
     ]
   },
   function(request, response) {
@@ -170,7 +170,7 @@ alexaApp.intent("reminder", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting this page')
-    response.say("Hi John, Let me check what all are the reminders for next three days.   Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half.");
+    response.say("Ok, Let me check. Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half. ");
     response.shouldEndSession(false);
   }
 );
@@ -183,7 +183,20 @@ alexaApp.intent("recomment", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting this page')
-    response.say("I can give you a good recipe to surprise.");
+    response.say("Shall I will give you a good recipe to surprise.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("recomment1", {
+    "utterances": [
+      "That is a good idea. Can you give me a cake recipe?", "Help me with a cake recipe"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting this page')
+    response.say("Shall I will give you a good recipe to surprise.");
     response.shouldEndSession(false);
   }
 );
