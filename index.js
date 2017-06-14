@@ -188,15 +188,28 @@ alexaApp.intent("recomment", {
   }
 );
 
-alexaApp.intent("recomment1", {
+alexaApp.intent("recipe", {
     "utterances": [
-      "That is a good idea. Can you give me a cake recipe?", "Help me with a cake recipe"
+      "Thats cool. Can you give me a cake recipe?", "Help me with a cake recipe"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting this page')
-    response.say("Shall I will give you a good recipe to surprise.");
+    response.say("Sure, But I need to check what all ingredients do you have in Kitchen. Give me few minutes.");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("recipe", {
+    "utterances": [
+      "Sure. Please check it fast."
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting this page')
+    response.say("Sure I will get back soon");
     response.shouldEndSession(false);
   }
 );
