@@ -46,7 +46,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set("number", 42);
-  response.say("Would you like to know the number?");
+  response.say("Welcome to Brillio Imagine IZone. I am Brillio AI Bot on Echo Dot");
   response.shouldEndSession(false);
 });
 
