@@ -201,9 +201,9 @@ alexaApp.intent("recipe", {
   }
 );
 
-alexaApp.intent("recipe", {
+alexaApp.intent("check", {
     "utterances": [
-      "Sure. Please check it fast."
+      "Please check it fast."
     ]
   },
   function(request, response) {
