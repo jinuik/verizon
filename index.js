@@ -46,7 +46,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set("number", 42);
-  response.say("Welcome to Brillio Imagine Innovation Zone. I am Jax, a Brillio AI Bot on Echo Dot. How can I help you?");
+  response.say("Welcome to Brillio Imagine Innovation Zone. I am Jax, a Brillio AI Bot on Echo Dot.");
   response.shouldEndSession(false);
 });
 
@@ -156,7 +156,7 @@ alexaApp.intent("Welcome", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting this page')
-    response.say("Hi John ");
+    response.say("Hi John, How can I help you? ");
     response.shouldEndSession(false);
   }
 );
