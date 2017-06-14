@@ -154,6 +154,7 @@ alexaApp.intent("Welcome", {
     ]
   },
   function(request, response) {
+    var session = request.getSession();
     console.log('hitting this page')
     response.say("Hi John ");
   }
@@ -166,6 +167,7 @@ alexaApp.intent("reminder", {
     ]
   },
   function(request, response) {
+    var session = request.getSession();
     console.log('hitting this page')
     response.say("Hi John, Let me check what all are the reminders for next three days.   Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half.");
   }
@@ -177,6 +179,7 @@ alexaApp.intent("recomment", {
     ]
   },
   function(request, response) {
+    var session = request.getSession();
     console.log('hitting this page')
     response.say("I can give you a good recipe to surprise.");
   }
