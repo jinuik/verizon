@@ -37,9 +37,34 @@ alexaApp.express({
 // from here on you can setup any other express routes or middlewares as normal
 app.set("view engine", "ejs");
 
-alexaApp.launch(function(request, response) {
+/*alexaApp.launch(function(request, response) {
+  request.getSession();
   response.say("Welcome to Brillio Imagine IZone. I am Brillio AI Bot on Echo Dot");
+  response.shouldEndSession(false);
+});*/
+
+
+alexaApp.launch(function(request, response) {
+  request.getSession().set("number", 42);
+  response.say("Would you like to know the number?");
+  response.shouldEndSession(false);
 });
+
+alexaApp.intent("tellme", function(request, response) {
+  var session = request.getSession();
+  response.say("The number is " + session.get("number"));
+  // clear only the 'number' attribute from the session
+  session.clear("number");
+});
+
+// the session variables can be entirely cleared, or cleared by key
+alexaApp.intent("clear", function(request, response) {
+  var session = request.getSession();
+  session.clear(); // or: session.clear("key") to clear a single value
+  response.say("Session cleared!");
+});
+
+
 
 /*alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
 
