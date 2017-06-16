@@ -217,7 +217,9 @@ alexaApp.intent("check", {
 
 
 alexaApp.error = function(exception, request, response) {
+    var session = request.getSession();
   response.say("Sorry, something bad happened");
+    response.shouldEndSession(true);
 };
 
 var socketFunction = function(commandname) {
