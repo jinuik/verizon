@@ -199,7 +199,9 @@ alexaApp.intent("recipe", {
     console.log('hitting this page')
     response.say("Sure, But I need to check what all ingredients do you have in Kitchen. Give me few minutes.");
     response.shouldEndSession(false);
-  }
+  }, function(err) {
+    
+}
 );
 
 alexaApp.intent("check", {
@@ -216,7 +218,10 @@ alexaApp.intent("check", {
 );
 
 
+alexaApp.messages.NO_INTENT_FOUND = "Sorry, something bad happened";
+
 alexaApp.error = function(exception, request, response) {
+    console.log('Coming to error')
     var session = request.getSession();
   response.say("Sorry, something bad happened");
     response.shouldEndSession(true);
