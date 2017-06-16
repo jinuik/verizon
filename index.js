@@ -29,7 +29,8 @@ alexaApp.express({
 
   // sets up a GET route when set to true. This is handy for testing in
   // development, but not recommended for production. disabled by default
-  debug: true
+  debug: true,
+    verify: true
 });
 
 // now POST calls to /test in express will be handled by the app.request() function
