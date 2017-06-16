@@ -168,6 +168,7 @@ alexaApp.intent("reminder", {
     ]
   },
   function(request, response) {
+     const zipcode = request.slot('ZIPCODE', false);
     var session = request.getSession();
     console.log('hitting this page')
     response.say("Ok, Let me check. Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half. ");
@@ -215,7 +216,7 @@ alexaApp.intent("check", {
 );
 
 
-app.error = function(exception, request, response) {
+alexaApp.error = function(exception, request, response) {
   response.say("Sorry, something bad happened");
 };
 
