@@ -29,8 +29,7 @@ alexaApp.express({
 
   // sets up a GET route when set to true. This is handy for testing in
   // development, but not recommended for production. disabled by default
-  debug: true,
-    verify: true
+  debug: true
 });
 
 // now POST calls to /test in express will be handled by the app.request() function
@@ -46,7 +45,7 @@ app.set("view engine", "ejs");
 
 
 alexaApp.launch(function(request, response) {
-  request.getSession().set("number", 42);
+  request.getSession().set();
   response.say("Welcome to Brillio Imagine Innovation Zone. I am Jax, a Brillio AI Bot on Echo Dot.");
   response.shouldEndSession(false);
 });
