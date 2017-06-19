@@ -218,6 +218,20 @@ alexaApp.intent("check", {
 );
 
 
+
+alexaApp.intent("default", {
+    "utterances": [
+      "can you give me tour plan", "give me another choice", "Not required", "can you tell my "
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting default')
+    response.say("I did not understand you");
+    response.shouldEndSession(false);
+  }
+);
+
 alexaApp.messages.NO_INTENT_FOUND = "Sorry, something bad happened";
 
 alexaApp.error = function(exception, request, response) {
