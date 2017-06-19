@@ -191,7 +191,7 @@ alexaApp.intent("recomment", {
 
 alexaApp.intent("recipe", {
     "utterances": [
-      "Thats cool. Can you give me a cake recipe?", "Help me with a cake recipe"
+      "Thats cool. Can you give me a cake recipe?", "Help me with a cake recipe", "Give me a cake recipe"
     ]
   },
   function(request, response) {
@@ -206,7 +206,7 @@ alexaApp.intent("recipe", {
 
 alexaApp.intent("check", {
     "utterances": [
-      "Please check it fast."
+      "Please check it fast", "make it fast", "do it fast"
     ]
   },
   function(request, response) {
