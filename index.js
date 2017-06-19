@@ -178,7 +178,7 @@ alexaApp.intent("reminder", {
     
 alexaApp.intent("recomment", {
     "utterances": [
-      "Yes Please", "Ok", "Sure"
+      "Yes Please tell", "Ok thats great", "please help me", "Ok Please tell"
     ]
   },
   function(request, response) {
