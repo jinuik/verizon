@@ -219,7 +219,7 @@ alexaApp.intent("check", {
 
 
 
-alexaApp.intent("default", {
+alexaApp.intent("defaultintent", {
     "utterances": [
       "can you give me tour plan", "give me another choice", "Not required", "no" , "say"
     ]
