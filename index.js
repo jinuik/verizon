@@ -221,7 +221,7 @@ alexaApp.intent("check", {
 
 alexaApp.intent("default", {
     "utterances": [
-      "can you give me tour plan", "give me another choice", "Not required", "can you tell my "
+      "can you give me tour plan", "give me another choice", "Not required", "no" , "say"
     ]
   },
   function(request, response) {
