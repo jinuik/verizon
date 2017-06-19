@@ -155,7 +155,7 @@ alexaApp.intent("Welcome", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting this page')
+    console.log('hitting welcome')
     response.say("Hi John, How can I help you? ");
     response.shouldEndSession(false);
   }
@@ -170,7 +170,7 @@ alexaApp.intent("reminder", {
   function(request, response) {
      const zipcode = request.slot('ZIPCODE', false);
     var session = request.getSession();
-    console.log('hitting this page')
+    console.log('hitting reminder')
     response.say("Ok, Let me check. Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half. ");
     response.shouldEndSession(false);
   }
@@ -183,7 +183,7 @@ alexaApp.intent("recomment", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting this page')
+    console.log('hitting recomment')
     response.say("Shall I will give you a good recipe to surprise.");
     response.shouldEndSession(false);
   }
@@ -196,7 +196,7 @@ alexaApp.intent("recipe", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting this page')
+    console.log('hitting recipe')
     response.say("Sure, But I need to check what all ingredients do you have in Kitchen. Give me few minutes.");
     response.shouldEndSession(false);
   }, function(err) {
@@ -211,7 +211,7 @@ alexaApp.intent("check", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting this page')
+    console.log('hitting check')
     response.say("Sure I will get back soon");
     response.shouldEndSession(false);
   }
