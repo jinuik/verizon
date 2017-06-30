@@ -210,7 +210,7 @@ alexaApp.intent("critical", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting welcome')
-    response.say("The orders that need your supervision immediately are order number: 11111");
+    response.say("The orders that need your supervision immediately are order number: 11 11 1");
     response.shouldEndSession(false);
   }
 );
