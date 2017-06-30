@@ -46,7 +46,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set();
-  response.say("Welcome to Verizon NOC Dashboard. I am Jax, a Brillio AI Bot on Alexa Echo Dot.");
+  response.say("Welcome to Verizon N O C Dashboard. I am Jax, a Brillio AI Bot on Alexa Echo Dot.");
   response.shouldEndSession(false);
 });
 
@@ -164,7 +164,7 @@ alexaApp.intent("welcome", {
 
 alexaApp.intent("order", {
     "utterances": [
-      "what are the number of ordering inflows we have"
+      "what are the number of ordering inflows we have", "how many ordering inflows we have", "tell me the number of ordering inflows we have"
     ]
   },
   function(request, response) {
@@ -178,7 +178,7 @@ alexaApp.intent("order", {
 
 alexaApp.intent("pending", {
     "utterances": [
-      "what are the pending orders for today"
+      "what are the pending orders for today", "tell me pending orders for today", "any pending orders today"
     ]
   },
   function(request, response) {
@@ -191,7 +191,7 @@ alexaApp.intent("pending", {
 
 alexaApp.intent("backlogs", {
     "utterances": [
-      "what are the Tn backlogs"
+      "what are the Tn backlogs", "which are the Tn backlogs", "tell me th Tn backlogs"
     ]
   },
   function(request, response) {
@@ -204,20 +204,20 @@ alexaApp.intent("backlogs", {
 
 alexaApp.intent("critical", {
     "utterances": [
-      "which are the most critical orders that need my supervision"
+      "which are the most critical orders that need my supervision", "any critical order needs my supervision", "any critical orders needs my attention"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting welcome')
-    response.say("The orders that need your supervision immediately are order number: 11 11 1");
+    response.say("The orders that need your supervision immediately are order number: 1 1 1 1 1");
     response.shouldEndSession(false);
   }
 );
 
 alexaApp.intent("assign", {
     "utterances": [
-      "to whom is this order assigned"
+      "to whom is this order assigned", "this order assigned to whom", "order assigned to whom"
     ]
   },
   function(request, response) {
@@ -230,13 +230,13 @@ alexaApp.intent("assign", {
 
 alexaApp.intent("mobile", {
     "utterances": [
-      "what is Stephen King’s mobile number"
+      "what is Stephen King’s mobile number", "tell me Stephen Kings mobile number", "Give me Stephen King's mobile number"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting welcome')
-    response.say("Stephen’s mobile number is: plus 1 612888 9898.");
+    response.say("Stephen’s mobile number is: plus 1 612 888 9898");
     response.shouldEndSession(false);
   }
 );
