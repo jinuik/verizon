@@ -164,7 +164,7 @@ alexaApp.intent("welcome", {
 
 alexaApp.intent("order", {
     "utterances": [
-      "what are the number of ordering inflows we have", "how many ordering inflows we have", "tell me the number of ordering inflows we have"
+      "what are the number of ordering inflows we have", "how many ordering inflows we have", "give the number of ordering inflows we have"
     ]
   },
   function(request, response) {
@@ -191,7 +191,7 @@ alexaApp.intent("pending", {
 
 alexaApp.intent("backlogs", {
     "utterances": [
-      "what are the Tn backlogs", "which are the Tn backlogs", "tell me th Tn backlogs"
+      "what are the Tn backlogs", "which are the Tn backlogs", "any Tn backlogs"
     ]
   },
   function(request, response) {
