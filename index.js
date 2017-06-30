@@ -46,7 +46,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set();
-  response.say("Welcome to Brillio Imagine Innovation Zone. I am Jax, a Brillio AI Bot on Echo Dot.");
+  response.say("Welcome to Verizon NOC Dashboard. I am Jax, a Brillio AI Bot on Alexa Echo Dot.");
   response.shouldEndSession(false);
 });
 
@@ -148,7 +148,7 @@ alexaApp.intent("transactionrresponse", {
 );
 */
 
-alexaApp.intent("Welcome", {
+alexaApp.intent("welcome", {
     "utterances": [
       "Hi", "Hello", "Hello Jax", "Hi Jax"
     ]
@@ -162,21 +162,88 @@ alexaApp.intent("Welcome", {
 );
 
 
-alexaApp.intent("reminder", {
+alexaApp.intent("order", {
     "utterances": [
-      "What are my reminders for next three days", "can you tell my reminders for next three days", "Please tell my reminders"
+      "what are the number of ordering inflows we have"
     ]
   },
   function(request, response) {
-     const zipcode = request.slot('ZIPCODE', false);
     var session = request.getSession();
-    console.log('hitting reminder')
-    response.say("Ok, Let me check. Here are the reminders:  Hey, Your anniversary is tomorrow. Let me give you some recommendations to surprise your better half. ");
+    console.log('hitting welcome')
+    response.say("John, the number of ordering inflows we have are 200");
     response.shouldEndSession(false);
   }
 );
+
+
+alexaApp.intent("pending", {
+    "utterances": [
+      "what are the pending orders for today"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting welcome')
+    response.say("The number of pending orders for today are 50");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("backlogs", {
+    "utterances": [
+      "what are the Tn backlogs"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting welcome')
+    response.say("The T1 backlogs are 22, T2 backlogs are 18");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("critical", {
+    "utterances": [
+      "which are the most critical orders that need my supervision"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting welcome')
+    response.say("The orders that need your supervision immediately are order number: 11111");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("assign", {
+    "utterances": [
+      "to whom is this order assigned"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting welcome')
+    response.say("The orders is assigned to Stephen King");
+    response.shouldEndSession(false);
+  }
+);
+
+alexaApp.intent("mobile", {
+    "utterances": [
+      "what is Stephen King’s mobile number"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting welcome')
+    response.say("Stephen’s mobile number is: plus 1 612888 9898.");
+    response.shouldEndSession(false);
+  }
+);
+
+
     
-alexaApp.intent("recomment", {
+/*alexaApp.intent("recomment", {
     "utterances": [
       "Yes Please tell", "Ok thats great", "please help me", "Ok Please tell"
     ]
@@ -187,35 +254,9 @@ alexaApp.intent("recomment", {
     response.say("Shall I will give you a good recipe to surprise.");
     response.shouldEndSession(false);
   }
-);
+);*/
 
-alexaApp.intent("recipe", {
-    "utterances": [
-      "Thats cool. Can you give me a cake recipe?", "Help me with a cake recipe", "Give me a cake recipe"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting recipe')
-    response.say("Sure, But I need to check what all ingredients do you have in Kitchen. Give me few minutes.");
-    response.shouldEndSession(false);
-  }, function(err) {
-    
-}
-);
 
-alexaApp.intent("check", {
-    "utterances": [
-      "Please check it fast", "make it fast", "do it fast"
-    ]
-  },
-  function(request, response) {
-    var session = request.getSession();
-    console.log('hitting check')
-    response.say("Sure I will get back soon");
-    response.shouldEndSession(false);
-  }
-);
 
 
 
