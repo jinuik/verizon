@@ -169,7 +169,7 @@ alexaApp.intent("order", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting welcome')
+    console.log('hitting order')
     response.say("John, the number of ordering inflows we have are 200");
     response.shouldEndSession(false);
   }
@@ -183,7 +183,7 @@ alexaApp.intent("pending", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting welcome')
+    console.log('hitting pending')
     response.say("The number of pending orders for today are 50");
     response.shouldEndSession(false);
   }
@@ -196,7 +196,7 @@ alexaApp.intent("backlogs", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting welcome')
+    console.log('hitting backlogs')
     response.say("The T1 backlogs are 22, T2 backlogs are 18");
     response.shouldEndSession(false);
   }
@@ -209,7 +209,7 @@ alexaApp.intent("critical", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting welcome')
+    console.log('hitting critical')
     response.say("The orders that need your supervision immediately are order number: 1 1 1 1 1");
     response.shouldEndSession(false);
   }
@@ -222,7 +222,7 @@ alexaApp.intent("assign", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting welcome')
+    console.log('hitting assign')
     response.say("The orders is assigned to Stephen King");
     response.shouldEndSession(false);
   }
@@ -235,7 +235,7 @@ alexaApp.intent("mobile", {
   },
   function(request, response) {
     var session = request.getSession();
-    console.log('hitting welcome')
+    console.log('hitting mobile')
     response.say("Stephen’s mobile number is: plus 1 612 888 9898");
     response.shouldEndSession(false);
   }
