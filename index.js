@@ -228,7 +228,7 @@ alexaApp.intent("key", {
   }
 );
 
-alexaApp.intent("thanks", {
+/*alexaApp.intent("thanks", {
     "utterances": [
       "thanks for the help", "thank you very much", "thanks a lot"
     ]
@@ -239,7 +239,7 @@ alexaApp.intent("thanks", {
     response.say("You are welcome. Have a great day");
     response.shouldEndSession(false);
   }
-);
+);*/
 
 
     
