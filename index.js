@@ -228,6 +228,18 @@ alexaApp.intent("key", {
   }
 );
 
+alexaApp.intent("bye", {
+    "utterances": [
+      "good bye"
+    ]
+  },
+  function(request, response) {
+    var session = request.getSession();
+    console.log('hitting assign')
+    
+    response.shouldEndSession(true);
+  }
+);
 /*alexaApp.intent("thanks", {
     "utterances": [
       "thanks for the help", "thank you very much", "thanks a lot"
@@ -268,7 +280,7 @@ alexaApp.intent("defaultintent", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting default')
-    response.say("I did not understand you");
+    response.say("Sorrry, I am not sure");
     response.shouldEndSession(false);
   }
 );
