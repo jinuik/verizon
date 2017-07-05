@@ -156,7 +156,7 @@ alexaApp.intent("welcome", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting welcome')
-    response.say("Hi John, How can I help you? ");
+    response.say("Hi Stephen, How can I help you? ");
     response.shouldEndSession(false);
   }
 );
@@ -164,79 +164,79 @@ alexaApp.intent("welcome", {
 
 alexaApp.intent("order", {
     "utterances": [
-      "what are the number of ordering inflows we have", "how many ordering inflows we have", "give the number of ordering inflows we have"
+      "what are the number of pipeline orders we have", "how many pipeline orders we have", "give the number of pipeline orders we have"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting order')
-    response.say("John, the number of ordering inflows we have are 200");
+    response.say("Stephen, the number of pipeline orders are 200");
     response.shouldEndSession(false);
   }
 );
 
 
-alexaApp.intent("pending", {
+alexaApp.intent("current", {
     "utterances": [
-      "what are the pending orders for today", "tell me pending orders for today", "any pending orders today"
+      "what are the number of current orders due for today", "tell me the number of current orders due for today", "any current orders due for today"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting pending')
-    response.say("The number of pending orders for today are 50");
+    response.say("The number of current orders due for today are 50");
     response.shouldEndSession(false);
   }
 );
 
-alexaApp.intent("backlogs", {
+alexaApp.intent("future", {
     "utterances": [
-      "what are the Tn backlogs", "which are the Tn backlogs", "any Tn backlogs"
+      "what are the future orders that are due", "which are future orders that are due", "any future orders that are due"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting backlogs')
-    response.say("The T1 backlogs are 22, T2 backlogs are 18");
+    response.say("The future orders that are due within the next 3 days are 12");
     response.shouldEndSession(false);
   }
 );
 
-alexaApp.intent("critical", {
+alexaApp.intent("past", {
     "utterances": [
-      "which are the most critical orders that need my supervision", "any critical order needs my supervision", "any critical orders needs my attention"
+      "which are the past orders that are due as of today", "any past orders that are due as of today", "any past orders due as of today"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting critical')
-    response.say("The orders that need your supervision immediately are order number: 1 1 1 1 1");
+    response.say("The orders that were due before today are 18");
     response.shouldEndSession(false);
   }
 );
 
-alexaApp.intent("assign", {
+alexaApp.intent("key", {
     "utterances": [
-      "to whom is this order assigned", "this order assigned to whom", "order assigned to whom"
+      "what are the key metrics for the NoC in this month", "any key metrics for the NoC in this month", "tell if any key metrics for the NoC in this month"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting assign')
-    response.say("The orders is assigned to Stephen King");
+    response.say("The average time spent on an order is around 42 min and productivity of the plant is at 60 orders per day which is better than the previous month by 12%.");
     response.shouldEndSession(false);
   }
 );
 
-alexaApp.intent("mobile", {
+alexaApp.intent("thanks", {
     "utterances": [
-      "what is Stephen King’s mobile number", "tell me Stephen Kings mobile number", "Give me Stephen King's mobile number"
+      "thanks for the help", "thank you very much", "thanks a lot"
     ]
   },
   function(request, response) {
     var session = request.getSession();
     console.log('hitting mobile')
-    response.say("Stephen’s mobile number is: plus 1 612 888 9898");
+    response.say("You are welcome. Have a great day");
     response.shouldEndSession(false);
   }
 );
