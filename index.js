@@ -236,7 +236,7 @@ alexaApp.intent("bye", {
   function(request, response) {
     var session = request.getSession();
     console.log('hitting assign')
-    
+    response.say("Bye, Have a great day");
     response.shouldEndSession(true);
   }
 );
