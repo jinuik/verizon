@@ -285,7 +285,7 @@ alexaApp.intent("defaultintent", {
     
     apiCall(request, response);
             setTimeout(function () {
-            
+            response.say("inside default intent");
         }, 4000);
     var session = request.getSession();
     console.log('hitting default')
@@ -327,7 +327,7 @@ function apiCall(req, res) {
         console.log(error);
     });
     request.end();
-    return;
+    return(a["result"]["fulfillment"]["speech"]);
 }
 
 server.listen(PORT);
