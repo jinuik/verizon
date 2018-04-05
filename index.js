@@ -6,7 +6,9 @@ var app = express();
 
 var server = require('http').createServer(app);  
 var io = require('socket.io')(server);
-
+var apiai = require('apiai');
+// var app = apiai("70a3b3c6e8f9405a91376dcbc57b2633");
+var app = apiai("46c5c97c0a034146ab9b25ac077b308f");
 
 var S;
 io.on('connection', function(socket){
@@ -278,10 +280,15 @@ alexaApp.intent("defaultintent", {
     ]
   },
   function(request, response) {
+    apiCall(request, response);
+            setTimeout(function () {
+            
+        }, 4000);
     var session = request.getSession();
     console.log('hitting default')
     response.say("Sorrry, I am not sure");
     response.shouldEndSession(false);
+     
   }
 );
 
@@ -299,6 +306,24 @@ var socketFunction = function(commandname) {
     
   S.emit('alexacommand',  commandname );  
 //});
+}
+
+
+
+function apiCall(req, res) {
+    var a = "hI";
+    var request = app.textRequest(a, {
+        sessionId: '1234567891'
+    });
+    request.on('response', function (response) {
+        var a = response;
+        res.say(a["result"]["fulfillment"]["speech"]);
+    });
+    request.on('error', function (error) {
+        console.log(error);
+    });
+    request.end();
+    return;
 }
 
 server.listen(PORT);
