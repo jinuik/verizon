@@ -48,7 +48,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   request.getSession().set();
-  response.say("Welcome to Verizon N O C Dashboard. I am Jax, a Brillio AI Bot on Alexa Echo Dot.");
+  response.say("Welcome to Lineage Demo. I am Hella, a Brillio AI Bot on Alexa Echo Dot.");
   response.shouldEndSession(false);
 });
 
@@ -152,7 +152,7 @@ alexaApp.intent("transactionrresponse", {
 
 alexaApp.intent("welcome", {
     "utterances": [
-      "Hi", "Hello", "Hello Jax", "Hi Jax"
+      "Hi", "Hello", "Hello Hella", "Hi Hella"
     ]
   },
   function(request, response) {
