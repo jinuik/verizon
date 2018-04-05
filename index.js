@@ -8,7 +8,7 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var apiai = require('apiai');
 // var app = apiai("70a3b3c6e8f9405a91376dcbc57b2633");
-var app = apiai("46c5c97c0a034146ab9b25ac077b308f");
+var appi = apiai("46c5c97c0a034146ab9b25ac077b308f");
 
 var S;
 io.on('connection', function(socket){
@@ -312,7 +312,7 @@ var socketFunction = function(commandname) {
 
 function apiCall(req, res) {
     var a = "hI";
-    var request = app.textRequest(a, {
+    var request = appi.textRequest(a, {
         sessionId: '1234567891'
     });
     request.on('response', function (response) {
