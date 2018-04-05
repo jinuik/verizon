@@ -321,7 +321,7 @@ function apiCall(req, res) {
     request.on('response', function (response) {
         var a = response;
         res.say(a["result"]["fulfillment"]["speech"]);
-        res.("i am inside dialog flow");
+       // res.("i am inside dialog flow");
     });
     request.on('error', function (error) {
         console.log(error);
