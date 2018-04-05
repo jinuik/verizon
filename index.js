@@ -280,13 +280,16 @@ alexaApp.intent("defaultintent", {
     ]
   },
   function(request, response) {
+    
+    response.say("Hey! Sorrry, I am not sure");
+    
     apiCall(request, response);
             setTimeout(function () {
             
         }, 4000);
     var session = request.getSession();
     console.log('hitting default')
-    response.say("Sorrry, I am not sure");
+   // response.say("Sorrry, I am not sure");
     response.shouldEndSession(false);
      
   }
@@ -318,6 +321,7 @@ function apiCall(req, res) {
     request.on('response', function (response) {
         var a = response;
         res.say(a["result"]["fulfillment"]["speech"]);
+        res.("i am inside dialog flow");
     });
     request.on('error', function (error) {
         console.log(error);
